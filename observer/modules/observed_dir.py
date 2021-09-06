@@ -2,14 +2,9 @@ import sys
 import time
 import logging
 from watchdog.observers import Observer
-from watchdog.events import LoggingEventHandler
 
+from observer.event_handler import Event
 from observer.subject import Subject
-
-class Event(LoggingEventHandler):
-
-    def on_created(self, event):
-        pass
 
 
 class ObservedDir(Subject):
